@@ -35,4 +35,8 @@ contract BeanToken is ERC20, Ownable {
         }("");
         if (!success) revert BeanToken__Withdrawal__Failed();
     }
+
+    function getBeanTokenPriceInEth() public pure returns (uint) {
+        return beanTokenPriceInEth;
+    }
 }
