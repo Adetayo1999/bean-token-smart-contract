@@ -12,6 +12,7 @@ const config: HardhatUserConfig = {
     polygonMumbai: {
       url: process.env.MUMBAI_RPC_URL,
       accounts: [process.env.DEPLOYER_PRIVATE_KEY!],
+      chainId: 80001,
     },
   },
   gasReporter: {

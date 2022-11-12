@@ -9,7 +9,9 @@ export const verifyContract = async (
       constructorArguments,
       address: contractAddress,
     });
-  } catch (error) {
-    console.error(error);
+  } catch (error: any) {
+    if (error.toString().includes("Contract source code already verified")) {
+      console.log("Contract Already Verified...");
+    } else console.error(error);
   }
 };
